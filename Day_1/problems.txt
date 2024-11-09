@@ -1,0 +1,66 @@
+1. Complex Object Structure with Type Inference
+You have a function processUserData that takes an object with name, age, address, and contact. The contact property is optional and can be an object or null. Ensure that you handle null correctly in this object when processing data.
+
+2. Using Readonly with Object Mutability
+Create a Product object that should be immutable after its initial creation. You need to be able to read the properties but should not allow modifications once created. Use TypeScript's Readonly utility type.
+
+3. Union Types with Custom Error Handling
+Write a function handleResponse that handles various API responses. The response can either be a success message (string), an error message (string), or an object with statusCode (number) and details (string). Based on the response type, the function should behave differently.
+
+4. Type Guard for null and undefined
+Create a function isNotNullOrUndefined that checks if a given input is neither null nor undefined. This should work for both primitive and object types. If the input is of a specific object type (say User), ensure it returns a valid boolean value.
+
+5. Optional Properties with Manual Type Definition
+You have an object settings with properties theme, fontSize, and layout. Now, create a new type OptionalSettings where all properties are optional. Define it manually without using mapped types or Partial<T>.
+
+6. Discriminated Union with Custom Types
+You're given two different types of error responses from an API: TimeoutError and UnauthorizedError. Each has different properties. Create a discriminated union type for error responses and handle each type appropriately in a function that returns a message based on the error type.
+
+7. Nested Union Types and Object Inference
+Imagine a function getData that returns either an array of strings or an object containing status (boolean) and message (string). The function should be able to process both responses and infer the correct type of the response based on what is returned.
+
+8. Working with Nullable Types in a Complex Function
+You're designing a function getDiscount that calculates a discount based on user status. The user object might have an optional isPremium property (boolean). If the isPremium property is null or undefined, the function should handle it gracefully and return a default value.
+
+9. Using never in Recursive Data Structures
+Problem:Suppose you have a function processData that processes data of two specific types: 'success' and 'error'. The function should:
+Log the message for 'success'.
+Throw an error for 'error'.
+Use the never type to handle any unexpected data type to ensure TypeScript will flag any incorrect cases at compile-time.
+
+
+10. Working with keyof and Type Constraints
+Suppose you have a configuration object with properties such as host, port, protocol, and timeout. Write a function getConfigValue that takes the property name (as a string) and returns the value corresponding to that property, but only if the property exists on the config.
+
+11. Using Type Guards with Arrays
+You have a function filterValidEntries that processes an array of mixed types: string, number, null, and undefined. Write a type guard to filter out invalid entries from the array and return only the valid types (string and number).
+
+12. Defining a Union of Interfaces for Shape Types
+Imagine you’re building a basic shape calculator. You have two shape types, Circle and Rectangle. Each shape has unique properties but should also share a common property, type, to identify the shape type. Create a union type for these shapes and write a function that calculates the area based on the shape type.
+
+13. Union Types for Different Data Types
+Create a function formatData that accepts data of type string | number | boolean and formats it as a string. If the data is a boolean, it should display "Yes" for true and "No" for false.
+
+14. Advanced Nullable Type with Fallback
+Write a function getEmail that takes an object with an optional email property. If the email property is null or undefined, return a fallback string like "No email provided". Ensure that undefined and null are handled properly.
+
+15. Type Aliases for Tuples
+Problem: Write a type alias for a tuple that represents a Product with id, name, and price. Ensure that id is a string, name is a string, and price is a number.
+
+16. Conditional Types
+Problem: Write a function getType that returns the type name of a variable as a string. Use conditional types to check whether the type is a string or number.
+
+17. Type Assertion
+You have a function that returns a user object, which could either contain a name property or not. You need to use type assertion to ensure that the object returned by the function contains the name property and treat it as a non-optional string.
+Write a TypeScript function that asserts the name property is a string even if it could potentially be undefined.
+
+
+18. Array Destructuring with Specific Types
+Use array destructuring to assign the first and second elements of a string array to variables firstName and lastName.
+
+19. Combining never and Union in Type Guards
+Write a function validateInput that accepts a union type of string | number | null. If the value is null, it should return a never type error. Otherwise, handle it based on its type.
+
+20. Handling Undefined with Default Parameters
+You have a function getUserAge that takes a user object with a possible age property (which can be undefined). If the age is undefined, return a default age, otherwise return the age value.
+
