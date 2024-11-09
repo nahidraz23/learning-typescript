@@ -20,7 +20,7 @@ Write a function handleResponse that handles various API responses. The response
       details: "successfull",
     };
 
-//   const value = 10; //this will show error
+//   const value = 10; //this will throw error
 
   const handleResponse = (res: ResponseType): boolean => {
     if (res) {
