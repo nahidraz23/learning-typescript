@@ -1,20 +1,20 @@
 {
     interface TimeoutError {
-        type: 'error';
+        type: 'timeout';
         content: string;
         code: number;
     }
 
     interface UnauthorizedError {
-        type: 'error';
+        type: 'unauthorized';
         content: string;
         code: number;
     }
     
     type ResponseType = TimeoutError | UnauthorizedError;
 
-    const message : TimeoutError = {
-        type: 'error',
+    const message : ResponseType = {
+        type: 'timeout',
         content: 'Request timeout',
         code: 401
     }
